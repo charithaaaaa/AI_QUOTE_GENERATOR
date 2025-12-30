@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>AI Quote Generator</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Quote Generator</h1>
+        <form method="POST" >
+            <input type="text"  name="topic" placeholder="Enter topic"required>
+            <button type="submit">Generate Quote</button>
+        </form>
+        {% if quote %}
+            <div class="quote-box">
+                <h2>Your Generated Quote:</h2>
+                <p>{{ quote }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
