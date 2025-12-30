@@ -12,10 +12,14 @@
             <input type="text"  name="topic" placeholder="Enter topic"required>
             <button type="submit">Generate Quote</button>
         </form>
-        {% if quote %}
+        {% if quotes %}
             <div class="quote-box">
-                <h2>Your Generated Quote:</h2>
-                <p>{{ quote }}</p>
+                <h2>Your Generated Quotes:</h2>
+                <ul>
+                    {% for quote in quotes %}
+                        <li>{{ quote }}</li>
+                    {% endfor %}
+                </ul>
             </div>
         {% endif %}
     </div>
